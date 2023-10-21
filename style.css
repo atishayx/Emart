@@ -1,0 +1,1148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#loader{
+    background-color: rgb(41,128,185);
+    background-image: url(https://bestof.nyc3.digitaloceanspaces.com/devsnap.me/sam/css-spinner-animation.gif);
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999999999999999999999999999;
+  }
+
+a{
+    text-decoration: none;
+    color: rgb(26, 89, 141);
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f5f5;
+}
+
+#moving {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    height: 5%;
+    background-color: rgb(26, 89, 141);
+}
+
+.scroller{
+    background-color: rgb(26, 89, 141);
+    white-space: nowrap;
+    overflow-x: auto;
+    position: relative;
+    z-index: 999;
+    overflow-y: hidden;
+}
+
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller-in>h1{
+    color: #fff;
+    display: inline-block;
+    transition: all linear 0.3s;
+    font-size: 1.3vmax;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0%;
+    width: 100%;
+    height: 80px;
+    padding: 0 4vmax;
+    z-index: 99999999;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px 1px #dadada4a;
+}
+
+#nav-div1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: calc(100%/4.8);
+    height: 100%;
+}
+
+
+#nav-div1>a {
+    font-weight: 500;
+    font-size: 1vmax;
+    text-decoration: none;
+    color: #000;
+    transition: all ease-in-out .1s;
+}
+
+#nav-div1>a:hover {
+    color: rgb(26, 89, 141);
+ border-bottom: 2px solid rgb(26, 89, 141);
+}
+
+#nav-div1>i{
+    display: none;
+}
+
+#nav>img {
+    /* width: 11vmax; */
+    height: 15vmax;
+}
+
+#nav-div2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: calc(100%/4.8);
+    height: 100%;
+}
+
+#nav-div2>i{
+    font-weight: 600;
+    /* color: rgb(26, 89, 141); */
+}
+
+#first {
+    padding: 0 5vw;
+    /* margin-top: 6vmax; */
+    width: 100%;
+    height: 85%;
+    background-image: url(bg-max.jpg);
+    background-size: cover;
+}
+
+#first>button {
+    cursor: pointer;
+    margin-top: 25%;
+    margin-right: 15px;
+    width: 14vmax;
+    height: 4vmax;
+    font-weight: 600;
+    color: rgb(26, 89, 141);
+    background-color: #fff;
+    border: 1.5px solid rgb(26, 89, 141);
+    transition: all ease-in-out .3s;
+}
+
+#first>button:hover{
+    background-color: rgb(26, 89, 141);
+}
+
+#first>button:hover a{
+    color: #fff;
+}
+
+#second {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f5f5;
+}
+
+#second>h1{
+    padding-left: 5vw;
+    font-size: 3vw;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    margin-top: 80px;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 1px 4px 1px #dadada4a;
+}
+
+.imagess{
+    position: relative;
+    width: 100%;
+    height: 75%;
+    display: block;
+}
+
+.imagess .img2{
+    top: 0;
+    left: 0;
+    display: none;
+    position: absolute;
+    z-index: 9999999999;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 10s !important;
+}
+
+.imagess:hover{
+    .img2{
+        display: initial;
+    }
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.details{
+    width: 100%;
+    height: 25%;
+}
+
+.details>h3{
+    margin: .5vw 0;
+    font-size: 1vw;
+    font-weight: 470;
+}
+
+.details>h2{
+    margin: .4vw 0;
+    font-size: 1.1vw;
+    font-weight: 400;
+}
+
+.details>p{
+    margin-top: 1vw;
+    color: rgb(26, 89, 141);
+    font-size: 1vw;
+    font-weight: 470;
+}
+
+.details>h6{
+    font-size: .9vw;
+    color: grey;
+    font-weight: 400;
+}
+
+.swiper-slide:first-child {
+    margin-left: 5vw;
+}
+
+.swiper-button-next{
+    color: #fff;
+    /* color: rgb(26, 89, 141); */
+    border-radius: 5px;
+    padding: 3vw 1.5vw;
+    background-color: rgb(26, 89, 141);
+    /* background-color: rgba(246, 245, 248, 0.842); */
+
+}
+
+.swiper-button-prev{
+    /* color: rgb(26, 89, 141); */
+    color: #fff;
+    background-color: rgb(26, 89, 141);
+    border-radius: 5px;
+    padding: 3vw 1.5vw;
+    /* background-color: rgba(246, 245, 248, 0.842); */
+}
+
+.swiper-scrollbar {
+    background: rgba(26, 89, 141, 0.498);
+}
+
+
+/* @media only screen and (min-width: 769px) {
+    .swiper-slide:first-child {
+      transition: transform 100ms;
+    }
+
+    .swiper-slide:first-child img {
+      transition: box-shadow 500ms;
+    }
+
+    .swiper-slide.swiper-slide-active:first-child {
+      transform: translateX(50%);
+      z-index: 2;
+    }
+
+    .swiper-slide.swiper-slide-active:first-child img {
+      box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+    }
+
+    .swiper-slide:nth-child(2) {
+      transition: transform 100ms;
+    }
+
+    .swiper-slide.swiper-slide-next:nth-child(2) {
+      transform: translateX(55%);
+      z-index: 1;
+    }
+
+    .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+      transform: translateX(-50%);
+    }
+
+    .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+      transform: translateX(-55%);
+    }
+  } */
+
+#third{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+
+#third-left{
+    /* text-align: center; */
+    padding: 7vw 4vw;
+    width: 40%;
+    height: 100%;
+    background-image: url(https://images.pexels.com/photos/6471059/pexels-photo-6471059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+    filter: grayscale(30%);
+}
+
+#third-left>h1{
+    letter-spacing: .8vw;
+    font-size: 4vw;
+    line-height: 4.3vw;
+    color: #fff;
+    mix-blend-mode: luminosity;
+}
+
+#third-left>p{
+    color: #fff;
+
+    margin: 2vw 0;
+}
+
+#third-left>button {
+    cursor: pointer;
+    margin-top: 25%;
+    margin-right: 15px;
+    width: 14vmax;
+    height: 4vmax;
+    font-weight: 600;
+    color: rgb(26, 89, 141);
+    background-color: #fff;
+    border: 1.5px solid rgb(26, 89, 141);
+    transition: all ease-in-out .3s;
+}
+
+#third-left>button:hover{
+    background-color: rgb(26, 89, 141);
+}
+
+#third-left>button:hover a{
+    color: #fff;
+}
+
+#third-right{
+    padding: 7vw 4vw;
+    width: 65%;
+    height: 100%;
+    background-image: url(https://images.pexels.com/photos/10823203/pexels-photo-10823203.jpeg);
+    background-size: cover;
+    background-position: center;
+    /* filter: grayscale(30%); */
+}
+
+
+#deals{
+    padding: 2vw;
+    width: 100%;
+    height: 140vh;
+}
+
+#deals>h1{
+    letter-spacing: .6vw;
+    font-size: 2vw;
+    font-weight: 500;
+    color: rgb(26, 89, 141);
+}
+
+#four{
+    width: 100%;
+    height: 70%;
+    text-align: center;
+}
+
+#four>h1{
+    letter-spacing: .6vw;
+    margin: 24px 0;
+    font-size: 35px;
+    font-weight: 400;
+    font-weight: 600;
+    color: rgb(26, 89, 141);
+}
+
+.deal-sections{
+    padding: 2vw 0;
+    display: flex;
+    gap: 2vw;
+    width: 100%;
+    height: 95%;
+}
+
+.section .img-div:hover{
+    scale: .9;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1vw;
+    width: calc(100%/4);
+    height: 100%;
+    background-color: rgb(246,245,248);
+    border-radius: 8px;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+}
+
+.img-div{
+    width: 100%;
+    height: 70%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px 1px #3131314a;
+    transition: all ease-in .2s;
+    cursor: pointer;
+}
+
+#pic1{
+    background-image: url(https://assets.ajio.com/medias/sys_master/root/20230526/MBQl/64709d18d55b7d0c63160945/-1117Wx1400H-469477515-navy-MODEL2.jpg);
+    background-size: cover;
+}
+
+#pic2{
+    background-size: cover;
+    background-image: url(https://5.imimg.com/data5/SELLER/Default/2022/4/KM/FM/BD/96403645/puma-wild-rider.jpg);
+    background-position: left;
+}
+
+#pic3{
+    background-image: url(https://helios-i.mashable.com/imagery/articles/06p1cWqinXelC506jY2Mw2T/hero-image.fill.size_1248x702.v1623370044.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#pic4{
+    background-image: url(https://cdn-images.buyma.com/imgdata/item/230304/0092601773/524697021/428.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#pic5{
+    background-image: url(https://www.levi.in/on/demandware.static/-/Sites-LeviIN-Library/en_IN/dwb0d4e84c/images/category/WomenClothing/Women%20Category%20-%20Tanks%20_%20Tees.png);
+    background-size: cover;
+}
+
+#pic6{
+    background-image: url(https://www.skechers.com.my/cdn/shop/products/128000_NVBL_B_1200x1200.jpg?v=1648713504);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#pic7{
+    background-image: url(https://www.designscene.net/wp-content/uploads/2012/02/United-Colors-of-Benetton-Spring-Summer-2012-09.jpg);
+    background-size: cover;
+}
+
+#pic8{
+    background-image: url(https://images.asos-media.com/products/crocs-classic-clogs-in-bone/202624418-1-neutral);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.section img{
+    object-fit: cover;
+    height: 10%;
+}
+
+#tommy{
+    width: 50%;
+    height: 10%;
+}
+
+.section p{
+    font-size: 1.6vw;
+    font-weight: 500;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+}
+
+.categories{
+    padding: 2vw;
+    width: 100%;
+    height: 47%;
+}
+
+.categories>h1{
+    letter-spacing: .6vw;
+    font-size: 2vw;
+    font-weight: 500;
+    color: rgb(26, 89, 141);
+}
+
+.categories-section{
+    padding: 2vw 0;
+    display: flex;
+    gap: 2vw;
+    width: 100%;
+    height: 90%;
+}
+
+.category-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .5vw;
+    width: calc(100%/7);
+    height: 100%;
+    background-color: rgb(246,245,248);
+    border-radius: 8px;
+}
+
+.category-img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 2px 2px 8px 2px #2d2b2b57;
+    transition: all ease-in-out  .2s;
+    cursor: pointer;
+}
+
+.category-img:hover{
+    scale: 1.1;
+}
+
+#i1{
+    background-image: url(https://ekhadiindia.s3.ap-south-1.amazonaws.com/uploads/products/meta/5dA3CqKcmRxS2l8HxrL4LUmfWaM7aPHH9yg3tnSo.jpeg);
+}
+
+#i2{
+    background-image: url(https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/6832333/2018/9/14/f0e3a9a6-b1d3-426e-9f5c-0350699140c41536926290358-WROGN-Men-Blue-Slim-Fit-Mid-Rise-Clean-Look-Stretchable-Jean-1.jpg);
+    background-position: bottom;
+}
+
+#i3{
+    background-image: url(https://cdn-images.buyma.com/imgdata/item/230127/0091390842/516109911/org.jpg);
+}
+
+#i4{
+    background-image: url(https://www.esprit.eu/dw/image/v2/BDSS_PRD/on/demandware.static/-/Sites-esprit-master/default/dw6de55870/images/15/063/063CC2C301_341_15.jpg?sfrm=jpg&sw=420&sh=630&sm=fit);
+}
+
+#i5{
+    background-image: url(https://cdn10.montecarlo.in/images/ProductImages/medium/223060578-1-38_5-jzT-035430-CHX.jpg);
+    background-position: top;
+}
+
+#i6{
+    background-image: url(https://assets.ajio.com/medias/sys_master/root/20230624/e4ea/649663cfeebac147fcf20d64/-473Wx593H-465324816-tan-MODEL.jpg);
+}
+
+#i7{
+    background-image: url(https://litb-cgis.rightinthebox.com/images/500x500/202301/bps/product/inc/ipcfbk1672711992240.jpg);
+}
+
+#i8{
+    background-image: url(https://www.jaipurfabric.com/uploads/jaipurfabric/products/jfk0157-421523_m.jpg?v=436);
+}
+
+#i9{
+    background-image: url(https://www.sairasboutique.net/cdn/shop/products/ClaretPink_GrayDesignerEmbroideredSilkPartyWearSaree-Saira_sBoutique.jpg?v=1667277430);
+}
+
+#i10{
+    background-image: url(https://images.meesho.com/images/products/204222534/ljhw1_512.webp);
+}
+
+#i11{
+    background-image: url(https://images.meesho.com/images/products/186076016/pqnxb_256.webp);
+    background-position: bottom;
+}
+
+#i12{
+    background-image: url(https://d3f4274tyu126k.cloudfront.net/wysiwyg/categoryContent/mid_banner-2.jpg);
+    background-position: bottom;
+}
+
+#i13{
+    background-image: url(https://images.boardriders.com/globalGrey/roxy-products/all/default/large/erjx603247_roxy,l_xbbw_frt1.jpg);
+}
+
+#i14{
+    background-image: url(https://asset1.cxnmarksandspencer.com/is/image/mands/SD_02_T81_6431D_F4_X_EC_0?$PLP_PRODUCT_IMAGE$&fmt=&fmt=pjpeg);
+}
+
+.category-div>p{
+    font-size: 1.5vw;
+    color: #000;
+}
+
+#women-section{
+    display: flex;
+    width: 100%;
+    height: 65%;
+}
+
+.women-section-left{
+    width: 65%;
+    height: 100%;
+    background-image: url(https://images.pexels.com/photos/1127000/pexels-photo-1127000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+}
+
+.women-section-right{
+    width: 35%;
+    height: 100%;
+    background-image: url(https://i.pinimg.com/originals/3c/08/a5/3c08a57c74e452814f623835288b7ab4.jpg);
+    background-size: cover;
+}
+.four-wrapper{
+    padding: 0 2vw;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+}
+
+.four1{
+    width: calc(100%/3);
+    height: 30vmax;
+    background-image: url(https://images.pexels.com/photos/4210850/pexels-photo-4210850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750);
+    background-size: cover;
+    background-position: bottom;
+    box-shadow: 4px 4px 5px 1px #c2c1c18d;
+}
+
+
+.four2{
+    width: calc(100%/3);
+    height: 30vmax;
+    background-size: cover;
+    background-image: url(https://techcrunch.com/wp-content/uploads/2022/09/Walmart_Be-Your-Own-Model_GIF-2.gif?w=680);
+    /* background-position: bottom; */
+    box-shadow: 4px 4px 5px 3px #dadada4a;
+}
+
+
+.four3{
+    width: calc(100%/3);
+    height: 30vmax;
+    /* background-image: url(https://images.pexels.com/photos/9558752/pexels-photo-9558752.jpeg); */
+    background-image: url(https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg?auto=compress&cs=tinysrgb&w=800);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 4px 4px 5px 1px #dadada4a;
+}
+
+footer{
+    width: 100%;
+    height: 65%;
+}
+
+#footer-part1{
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 30%;
+    background-color: rgb(23, 78, 123);
+    color: #fff;
+}
+
+#footer-part1>h1{
+    letter-spacing: 1vw;
+}
+
+#footer-part1>p{
+    font-size: 12px;
+    text-align: end;
+    font-weight: 300;
+}
+
+#footer-part1-div{
+    width: 24vw;
+    height: 30%;
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
+}
+
+#footer-part1 input{
+    padding: 1vw .5vw;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1.5px solid #fff;
+}
+
+#footer-part1 button{
+    background-color: transparent;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    border: 1.5px solid #fff;
+}
+
+#footer-part2{
+    padding: 2.5vw 2vw;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 30%;
+    background-color: rgb(26, 89, 141);
+}
+
+#left-part{
+    display: flex;
+    gap: 50px;
+}
+
+#one h5{
+    font-weight: 500;
+    font-size: .8vw;
+    color: #dadada;
+    line-height: 1.7vw;
+}
+
+#two h5{
+    font-weight: 500;
+    font-size: .8vw;
+    color: #dadada;
+    line-height: 1.7vw;
+}
+
+#right-part{
+    gap: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #dadada;
+}
+
+#right-part>h5{
+    font-weight: 500;
+    font-size: .8vw;
+}
+
+#footer-part3{
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40%;
+    background-image: url(https://images.pexels.com/photos/4109755/pexels-photo-4109755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+    color: #f8f5f5bb;
+    background-position: center;
+}
+
+
+@media (max-width:600px) {
+
+    #wrapper{
+        overflow-x: hidden;
+    }
+
+    #moving {
+        height: 7%;
+    }
+    
+
+    .scroller-in>h1{
+        font-size: 1.6vmax;
+    }
+
+    #nav{
+        padding: 0 1vmax;
+    }
+
+    #nav>img{
+        height: 17vmax;
+    }
+
+    #nav-div1 {
+        width: 15%;
+    }
+
+    #nav-div1>a{
+      display: none;
+    }
+
+    #nav-div1>i {
+        font-size: 2.5vmax;
+        display: initial;
+    }
+
+    #nav-div2>i {
+        display: none;
+    }
+
+    #nav-div2 .visible{
+        display: initial;
+    }
+
+    #first {
+        height: 80%;
+        background-image: url(bg-min.jpg);
+    }
+
+    #four{
+        padding: 0 4vw;
+        width: 100%;
+        height: 50%;
+    }
+
+    #four>h1{
+        margin-bottom: -15px;
+        font-size: 4vmax;
+    }
+
+    #first>button {
+        cursor: pointer;
+        margin-top: 40vmax;
+        margin-right: 15px;
+        width: 13vmax;
+        height: 4vmax;    
+    }
+
+    .imagess{
+        height: 50%;
+    }
+    
+    .imagess{
+        position: relative;
+        width: 100%;
+        height: 75%;
+        display: block;
+    }
+    
+    .imagess .img2{
+        top: 0;
+        left: 0;
+        display: none;
+        position: absolute;
+        z-index: 9999999999;
+        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 10s !important;
+    }
+    
+    .imagess:hover{
+        .img2{
+            display: initial;
+        }
+    }
+    
+    
+    .details{
+        width: 100%;
+        height: auto;
+    }
+    
+    .details>h3{
+        font-size: 1vmax;
+        font-weight: 470;
+    }
+    
+    .details>h2{
+        margin: .4vw 0;
+        font-size: 1.1vmax;
+        font-weight: 400;
+    }
+    
+    .details>p{
+        font-size: .9vmax;
+    }
+    
+    .details>h6{
+        font-size: 1.3vmax;
+    }
+    
+    .swiper-button-next{
+        padding: 2vmax;
+        color: rgb(26, 89, 141);
+        background-color: #ffffffc1;
+    }
+    
+    .swiper-button-prev{
+        padding: 2vmax;
+        color: rgb(26, 89, 141);
+        background-color: #ffffffc1;
+    }
+    
+    .swiper-scrollbar {
+        background: rgba(26, 89, 141, 0.294);
+    }
+
+    #second{
+        height: 50%;
+    }
+
+    .swiper-slide{
+        height: 70%;
+    }
+
+    #third{
+        margin-top: 25px;
+        height: 45%;
+    }
+
+    #third-left{
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: space-evenly;
+    }
+
+    #third-left>h1{
+        letter-spacing: .9vmax;
+        font-size: 4vmax;
+        line-height: 4.3vmax;
+    }
+
+    #third-left>p{    
+        max-width: 70%;
+    }
+
+    #deals{
+        padding: 1vmax;
+        height: 55vh;
+    }
+    
+    #deals>h1{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 2vmax;
+    }
+
+    .deal-sections{
+        gap: 1vw;
+        height: 90%;
+    }
+    
+    .img-div{
+    border-radius: 5px;
+    }
+
+    .section p{
+        font-size: 1vmax;
+    }
+    
+    #tommy{
+        width: 80%;
+        height: 10%;
+    }
+
+    .categories{
+        padding: 1vw 2vw;
+        width: 100%;
+        height: 20%;
+    }
+
+    .categories-section{
+        padding: 2vw 0;
+        display: flex;
+        justify-content: space-evenly;
+        height: 90%;
+        /* overflow: hidden; */
+    }
+
+    .category-img{
+        width: 70px;
+        height: 70px;
+    }
+    .categories>h1{
+        text-align: center;
+        font-size: 2vmax;
+    }
+
+    .category-div>p{
+        font-size: 1.5vmax;
+        color: #000;
+    }
+
+    .nonne{
+        display: none;
+    }
+
+    #women>h1{
+        margin-top: 25px;
+    }
+
+    #four{
+        height: 40%;
+        text-align: center;
+    }
+
+    #four>h1{
+        letter-spacing: .6vw;
+        margin-top: 40px;
+        font-size: 3vmax;
+    }    
+
+    .four1{
+        width: 16vmax;
+        height: 20vmax;
+    }
+    .four2{
+        width: 16vmax;
+        height: 20vmax;
+    }
+    .four3{
+        width: 16vmax;
+        height: 20vmax;
+    }
+    #third-left{
+        width: 100%;
+    }
+
+    #women-section{
+        flex-direction: column;
+        height: 70%;
+        background-image: url(https://img.freepik.com/free-psd/woman-dress-spring-sale-flyer_23-2148437364.jpg?w=740&t=st=1690616765~exp=1690617365~hmac=420e43f7cbb1450b64f225d8831f271940d5ef015d1aa86057a660cc2c7ceec0);
+        background-size: cover;
+
+    }
+
+    .women-section-left{
+        display: none;
+        width: 100%;
+        height: 55%;
+        background-position: center;
+    }
+
+    .women-section-right{
+        display: none;
+        width: 100%;
+        height: 45%;
+        background-position: center;
+    }
+
+    footer{
+        height: 60%;
+    }
+    
+    #footer-part1{
+        padding: 2vw 4vw;
+        height: 25%;
+        background-color: rgb(23, 78, 123);
+        color: #fff;
+    }
+
+    #footer-part1>h1{
+        font-size: 2vmax;
+        letter-spacing: 1vw;
+    }
+
+    #footer-part1-div{
+       display: none; 
+    }
+    
+    #footer-part1>p{
+        font-size: 12px;
+        text-align: start;
+        font-weight: 300;
+        max-width: 50%;
+    }
+
+    #footer-part2{
+        display: flex;
+        align-items: center;
+        padding: 4vw;
+        height: 25%;
+    }
+
+    #left-part{
+        gap: 15px;
+    }    
+
+    #one h5{
+        font-weight: 500;
+        font-size: 1vmax;
+        line-height: 1.7vmax;
+    }
+
+    #two h5{
+        font-weight: 500;
+        font-size: 1vmax;
+        line-height: 1.7vmax;
+    }
+    
+    #right-part>h5{
+        font-size: 1.2vmax;
+    }
+
+    #footer-part3{
+        padding: 4vw;
+        width: 100%;
+        height: 50%;
+        align-items: start;
+    }
+    
+    #footer-part3>P{
+        color: #edecec;
+        font-size: 1.2vmax;
+        font-weight: 600;
+    }
+}
+
